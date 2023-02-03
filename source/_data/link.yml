@@ -1,0 +1,34 @@
+- class_name: 友情链接
+  class_desc: 独学而无友，则孤陋而寡闻。
+  link_list:
+    - name: 董帅的个人导航
+      link: http://nav.dongshuai.top/
+      avatar: http://nav.dongshuai.top/assets/images/favicon.png
+      descr: 博主自用的个人导航网站，方便更换电脑也能找到网址。
+    - name: Hexo
+      link: https://hexo.io/zh-tw/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单、功能强大的Blog框架
+    - name: butterfly
+      link: https://butterfly.js.org/
+      avatar: https://butterfly.js.org/img/avatar.png
+      descr: A Simple and Card UI Design theme for Hexo
+- class_name: 网站
+  class_desc: 宝藏网站
+  link_list:
+    - name: Pexels
+      link: https://www.pexels.com/zh-cn/
+      avatar: https://www.pexels.com/favicon.ico
+      descr: 提供免费无版权图片、视频下载的网站。
+    - name: 少数派
+      link: https://sspai.com
+      avatar: https://img1.baidu.com/it/u=999599288,2435653602&fm=26&fmt=auto
+      descr: 基于专业创作社群的数字消费指南平台
+    - name: 素材导航
+      link: http://so.uigreat.com
+      avatar: http://so.uigreat.com/favicon.ico
+      descr: 图片素材、资源导航网站。
+    - name: MacWk
+      link: https://macwk.com/soft/texteditor/p1
+      avatar: https://macwk.com/favicon.ico
+      descr: Mac软件下载网站

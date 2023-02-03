@@ -1,0 +1,307 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>java题库 | 董帅的个人博客</title><meta name="author" content="董帅"><meta name="copyright" content="董帅"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1、HashMap的put方法HashMap是数组、链表、红黑树实现的。红黑树又称自平衡二叉查找树。  HashMap的put的具体流程如下：（1）HashMap通过put方法传进来的key通过哈希算法得到HashCode，HashCode通过与与操作去和数组长度-1运算先得出数组下标。（2）如果数组下标为止元素为空则将key和value封装为Node（Entry）对象放入该位置。（3）如果数组下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java题库">
+<meta property="og:url" content="http://blog.dongshuai.top/2021/12/01/exercises/index.html">
+<meta property="og:site_name" content="董帅的个人博客">
+<meta property="og:description" content="1、HashMap的put方法HashMap是数组、链表、红黑树实现的。红黑树又称自平衡二叉查找树。  HashMap的put的具体流程如下：（1）HashMap通过put方法传进来的key通过哈希算法得到HashCode，HashCode通过与与操作去和数组长度-1运算先得出数组下标。（2）如果数组下标为止元素为空则将key和value封装为Node（Entry）对象放入该位置。（3）如果数组下">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F540e03f9ba1527258a27e6a0f31aacc59c6a5ec6.jpg&refer=http%3A%2F%2Fi2.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654421952&t=e363fdea62ccee37819c1f9151cd51ea">
+<meta property="article:published_time" content="2021-12-01T08:50:24.000Z">
+<meta property="article:modified_time" content="2022-12-01T01:24:51.048Z">
+<meta property="article:author" content="董帅">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F540e03f9ba1527258a27e6a0f31aacc59c6a5ec6.jpg&refer=http%3A%2F%2Fi2.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654421952&t=e363fdea62ccee37819c1f9151cd51ea"><link rel="shortcut icon" href="https://img.zcool.cn/community/01ffdf5b706950a801206a359c7cd6.jpg@1280w_1l_2o_100sh.jpg"><link rel="canonical" href="http://blog.dongshuai.top/2021/12/01/exercises/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'java题库',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-01 09:24:51'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (false) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://img.zcool.cn/community/01ffdf5b706950a801206a359c7cd6.jpg@1280w_1l_2o_100sh.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/my_hpptalk/"><i class="fa-fw fas fa-edit"></i><span> 笨嘴拙舌</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F540e03f9ba1527258a27e6a0f31aacc59c6a5ec6.jpg&amp;refer=http%3A%2F%2Fi2.hdslb.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1654421952&amp;t=e363fdea62ccee37819c1f9151cd51ea')"><nav id="nav"><span id="blog-info"><a href="/" title="董帅的个人博客"><span class="site-name">董帅的个人博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/my_hpptalk/"><i class="fa-fw fas fa-edit"></i><span> 笨嘴拙舌</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">java题库</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-01T08:50:24.000Z" title="发表于 2021-12-01 16:50:24">2021-12-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-01T01:24:51.048Z" title="更新于 2022-12-01 09:24:51">2022-12-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="java题库"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h4 id="1、HashMap的put方法"><a href="#1、HashMap的put方法" class="headerlink" title="1、HashMap的put方法"></a>1、HashMap的put方法</h4><p>HashMap是数组、链表、红黑树实现的。红黑树又称自平衡二叉查找树。</p>
+<blockquote>
+<p>HashMap的put的具体流程如下：<br>（1）HashMap通过put方法传进来的key通过哈希算法得到HashCode，HashCode通过与<strong>与操作</strong>去和数组长度-1运算先得出数组下标。<br>（2）如果数组下标为止元素为空则将key和value封装为Node（Entry）对象放入该位置。<br>（3）如果数组下标元素不为空，先判断当前位置Node的类型，是红黑树还是链表Node。<br>  如果是是红黑树则将key和value封装成红黑树节点，添加到红黑树中去。 在添加到红黑树的过程中判断红黑树是否存在当前的key，如果存在则更新value。<br>  如果Node对象是链表节点的话则将key和value封装成一个链表Node通过尾插法添加到链表最后的位置。（JDK1.7是头插法）尾插法会遍历链表，如果存在当前的key则更新value。<br>插入链表后当前链表元素大于等于8个，会将链表转成红黑树。<br>jdk1.7是插入前判断是否需要扩容，jdk1.8是红黑树Node或者链表Node插入后判断是否需要扩容，需要就扩容，不需要就结束当前的put方法。</p>
+</blockquote>
+<h4 id="2、说一下ThreadLocal"><a href="#2、说一下ThreadLocal" class="headerlink" title="2、说一下ThreadLocal"></a>2、说一下ThreadLocal</h4><blockquote>
+<p>ThreadLocal是java中线程本地存储机制，可以利用该机制将某个数据、某个对象，某个值缓存在某个线程的内部，<br>该线程可以在任意时刻、任意方法中获取缓存的数据。<br>ThreadLocal是通过ThreadLocalMap实现的，每个Thread对象中都存在一个ThreadLocalMap，Map的Key是Thread对象，<br>Map的Value为要缓存的值。<br>使用场景：<br>两个线程如果给同一个对象赋不同的值，获取对象值可能为线程1赋得值，也可能为线程2赋得值。会有线程不安全的问题。<br>使用ThreadLocal会将对象值缓存到该线程中，每个线程拿到的值固定为该线程赋予的。最简单的使用场景，往里存用户信息，用户对象User是全局的，每个线程拿到的用户信息都不一样，就往里存，然后可以根据线程拿到不同用户的信息</p>
+</blockquote>
+<h4 id="3、说一下JVM中哪些是共享区域"><a href="#3、说一下JVM中哪些是共享区域" class="headerlink" title="3、说一下JVM中哪些是共享区域"></a>3、说一下JVM中哪些是共享区域</h4><blockquote>
+<p>首先jvm分为三个主要部分：运行时数据区域（内存区域）、类装载系统、字节码执行引擎。<br>运行时数据区域分为：方法区、栈、堆、程序计数器、本地方法栈；其中栈又叫做线程栈，每一个线程开始运行，JVM虚拟机就会给此线程分配一个线程栈，程序计数器同理栈。本地方法栈同理栈，只是运行方法为java虚拟机缺省的方法。由此可知栈、程序计数器、本地方法栈为非共享区域，<br>方法区（元空间）存储的是类信息和常量、静态变量、类信息，这些数据每个线程都可以去调用是共享的。堆存放的是对象同理元空间，也是共享的每个线程都可以去访问。</p>
+</blockquote>
+<h4 id="4、说一下gc-root"><a href="#4、说一下gc-root" class="headerlink" title="4、说一下gc root"></a>4、说一下gc root</h4><blockquote>
+<p>java是有垃圾回收机制的，jvm会主动进行垃圾回收，区分哪些为”垃圾”，那些为”非垃圾”就是通过对象是否被引用判断，gc root作为是否被引用进行查找的根，gc root特征是只会引用，而不会被引用。举例有：栈中的本地变量、方法区中的静态变量、本地方法栈中的变量，正在运行的线程等可以叫gc root。</p>
+</blockquote>
+<h4 id="5、说一下Minor-GC、full-gc-和-Major-gc的区别"><a href="#5、说一下Minor-GC、full-gc-和-Major-gc的区别" class="headerlink" title="5、说一下Minor GC、full gc 和 Major gc的区别"></a>5、说一下Minor GC、full gc 和 Major gc的区别</h4><blockquote>
+<p>Minor gc 从年轻代空间（包括 Eden 和 Survivor 区域）回收内存被称为 Minor gc。<br>Major gc 是清理老年代。会stop the world停止应用线程或者叫用户线程。<br>full gc是对青年代、老年代、元空间的全局垃圾回收，触发full gc的时候会stop the world停止应用线程或者叫用户线程。<br>Minor gc使用复制算法不会STW，Major gc和full gc使用标记整理算法会STW。</p>
+</blockquote>
+<h4 id="6、正在运行的项目如何排查jvm问题"><a href="#6、正在运行的项目如何排查jvm问题" class="headerlink" title="6、正在运行的项目如何排查jvm问题"></a>6、正在运行的项目如何排查jvm问题</h4><blockquote>
+<p>可以使用jmap命令查看jvm各个区域的使用情况。<br>可以使用jstack命令查看jvm各个线程的情况。<br>可以使用jstat命令查看垃圾回收情况。<br>一般使用的jvm监控程序也是调用这些命令。<br>一般jvm问题就是减少full gc。<br>系统发生OOM的时候会生成dump文件，通过工具分析dump文件查看异常的对象、线程定位到具体代码。<br>jvm 调优需要分析，定位问题，不同场景使用不同的解决方法，目的是解决cpu占用高、频繁full gc、内存溢出等。</p>
+</blockquote>
+<h4 id="7、如何查看线程死锁"><a href="#7、如何查看线程死锁" class="headerlink" title="7、如何查看线程死锁"></a>7、如何查看线程死锁</h4><blockquote>
+<p>通过工具或者直接用jstack命令<br>mysql线程死锁可用通过sql或查看表</p>
+</blockquote>
+<h4 id="8、线程之间是如何进行通讯的"><a href="#8、线程之间是如何进行通讯的" class="headerlink" title="8、线程之间是如何进行通讯的"></a>8、线程之间是如何进行通讯的</h4><blockquote>
+<p>一个进程内两个线程进行通讯和两个进程（两台机器）的线程如和进行通讯。<br>第一种可以通过共享内存的方式进行通讯，第二种通过网络的方式进行通讯。  </p>
+</blockquote>
+<h4 id="9、介绍一下Spring"><a href="#9、介绍一下Spring" class="headerlink" title="9、介绍一下Spring"></a>9、介绍一下Spring</h4><blockquote>
+<p>简单说Spring是一个生态，可以构建java应用所需要的一切基础设施，通常提到Spring是指SpringFramWork.<br>Spring 是一个轻量级开源的容器框架。<br>Spring 是为了解决企业级应用开发业务逻辑层和其他层对象和对象之间耦合问题。<br>Spring 是一个IOC和AOP的容器框架。AOP：面向切面编程；IOC：控制反转；容器：包含并管理应用对象的生命周期。<br>（1）启动Spring的时候就是创建一个Spring容器，就是创建一个SpringApplicationContext的对象。<br>（2）首先Spring会扫面，得到所有的BeanDefinition对象，存在一个map里。<br>（3）筛选非懒加载的单例BeanDefinition对象进行创建bean，对于多例的bean不需要在启动的过程中去创建。对于多例的bean会在每次获取的时候通过BeanDefinition去创建。<br>（4）利用BeanDefinition创建bean就是bean的创建生命周期，创建bean期间包括合并BeanDefinition、推断构造方法、实例化、属性填充、初始化前、初始化后等步骤。其中AOP就是初始化后这一步骤中。<br>（5）单例Bean创建完成后，Spring会发布一个容器启动事件。<br>（6）String启动结束。<br>（7）在源码中会更加复杂，比如1源码中会提供一些模板方法，让子类来实现。比如源码中还涉及到了一些BeanFactoryPostProcessor和BeanPostProcessor的注册，Spring的扫描就是通过BeanFactoryPostProcessor来实现的，依赖注入就是通过BeanPostProcessor来实现的。<br>（8）在Spring启动中还会处理@import等注解。</p>
+</blockquote>
+<h4 id="10、Spring的优点和缺点"><a href="#10、Spring的优点和缺点" class="headerlink" title="10、Spring的优点和缺点"></a>10、Spring的优点和缺点</h4><blockquote>
+<p>基于Spring的特性可以总结一些Spring的优点，比如：<br>（一）Spring是通过IOC集中管理对象的，对象和对象之间的<strong>耦合性降低了</strong>，对象蛋例、多例模式、懒加载、这些通过配置就可以实现，不用在编写代码，<strong>方便了对象的维护</strong>。<br>（二）基于AOP可以再不修改业务代码的情况对业务增强（比如业务监控、日志、安全）<strong>减少重复代码提高了开发效率，维护也方便</strong>。<br>（三）Spring可以通过声明@Transactional灵活的进行事务管理提高开发的效率。<br>（四）Spring有优秀的扩展能力，只需要简单配置就可以集成大量的第三方框架。<br>（五）Spring封装了一些java EE API的功能性方法，比如：JDBC、远程调用、邮件发送等，还是为了简化开发提高开发效率。<br>（六） Spring源码是提高java水平很好的范例。<br>个人认为在应用层Spring是没有缺点的，如果必须说出缺点的话就是就是深入了解底层的Spring比较困难，上层使用越简单，底层封装越复杂，Spring源码有超过百万行。  </p>
+</blockquote>
+<h4 id="11、什么是IOC容器，有什么作用？"><a href="#11、什么是IOC容器，有什么作用？" class="headerlink" title="11、什么是IOC容器，有什么作用？"></a>11、什么是IOC容器，有什么作用？</h4><blockquote>
+<p>IOC通俗的讲就是控制反转，当引入了IOC就是将创建对象的控制权交给了Spring的IOC容器，不使用IOC的话对象是开发人员通过new对象去创建的，现在是由IOC创建对象，使用对象的话通过DI依赖注入获取， </p>
+</blockquote>
+<h4 id="12、Spring-IOC的实现机制是什么？"><a href="#12、Spring-IOC的实现机制是什么？" class="headerlink" title="12、Spring IOC的实现机制是什么？"></a>12、Spring IOC的实现机制是什么？</h4><blockquote>
+<p>通过简单工厂+反射机制实现的。  </p>
+</blockquote>
+<h4 id="13、Spring的IOC和DI有什么区别？"><a href="#13、Spring的IOC和DI有什么区别？" class="headerlink" title="13、Spring的IOC和DI有什么区别？"></a>13、Spring的IOC和DI有什么区别？</h4><blockquote>
+<p>IOC控制反转是一种思想或者说是思路。DI是实现IOC的重要的一个环节。  </p>
+</blockquote>
+<h4 id="14、紧耦合与松耦合的区别，如何编写松耦合的代码？"><a href="#14、紧耦合与松耦合的区别，如何编写松耦合的代码？" class="headerlink" title="14、紧耦合与松耦合的区别，如何编写松耦合的代码？"></a>14、紧耦合与松耦合的区别，如何编写松耦合的代码？</h4><blockquote>
+<p>在java中紧耦合是指类与类之间高度依赖。（缺点：代码复用性低、维护成本高、连带性修改一个地方影响n个地方）。<br>编写松耦合代码可以遵循java的五大原则来实现：<br>（1）单一性原则（将事物抽象为类）<br>（2）接口分离原则（模块间通过接口隔离）<br>（3）依赖倒置原则（反转依赖关系，上层不去依赖下层，都去依赖抽象；简单说就是层与层之间不能设计成垂直的，要有层次，是平行分层的）<br> 符合以上三个原则可以降低耦合度，下面两个原则为扩展内容。<br>（1）开闭原则（类、模块、方法要可扩展，不可修改）<br>（2）替换原则（提取相同的公共属性做一个基类，保证所以子类可以替换它的基类）</p>
+</blockquote>
+<h4 id="15、-BeanFactory作用"><a href="#15、-BeanFactory作用" class="headerlink" title="15、 BeanFactory作用"></a>15、 BeanFactory作用</h4><blockquote>
+<p>（一） BeanFactory是Spring的顶层接口。<br>（二） BeanFactory是Bean工厂主要是生产Bean。<br>（三） BeanFactory实现了简单工厂模式，通过getBean传入一个标识来生产bean。<br>（四） BeanFactory有非常多的实现类，这些工厂有不同的职责，其中最强大的工厂是DefaultListableBeanFactory，Spring底层就是用这个工厂生产Bean的。<br>（五） BeanFactory也是容器，应为它管理着Bean的生命周期。  </p>
+</blockquote>
+<h4 id="16、BeanDefinition的作用"><a href="#16、BeanDefinition的作用" class="headerlink" title="16、BeanDefinition的作用"></a>16、BeanDefinition的作用</h4><blockquote>
+<p>BeanDefinition是存储Bean的定义信息的，比如比如是否多例、是否懒加载、是否抽象、是否自动装配等，它决定了Bean的生产方式。  </p>
+</blockquote>
+<h4 id="17、BeanFactory和Applicationcontext的区别。"><a href="#17、BeanFactory和Applicationcontext的区别。" class="headerlink" title="17、BeanFactory和Applicationcontext的区别。"></a>17、BeanFactory和Applicationcontext的区别。</h4><blockquote>
+<p>（一） Applicationcontext是Spring的上下文，是Spring的容器。Applicationcontext实现了BeanFactory，Applicationcontext不生产Bean，是通知BeanFactory生产<br>Bean，Applicationcontext和BeanFactory都可以作为Spring容器，都管理着Bean的生命周期。Applicationcontext做的事情更多，比如：自动将配置好的Bean注册、加载环境变量、支持多语言、这册对外扩展的接口等。  </p>
+</blockquote>
+<h4 id="18、Spring-ioc容器的加载过程。"><a href="#18、Spring-ioc容器的加载过程。" class="headerlink" title="18、Spring ioc容器的加载过程。"></a>18、Spring ioc容器的加载过程。</h4><blockquote>
+<p>当创建一个Spring容器或者加载一个Spring上下文的时候就开始了IOC的加载，IOC的加载就是创建Bean的过程。<br>（一） 实例化一个Applicationcontext的对象。<br>（二） 调用Bean工厂后置处理器完成扫描。<br>（三） 循环解析扫描出来的类的信息。<br>（四） 实例化一个BeanDefinition对象存储解析出来的类信息。<br>（五） 把实例化beanDefinition对象put到beanDefinitionMap中缓存起来，方便以后实例化Bean。<br>（六） 再次调用其他Bean工厂的后置处理器。<br>（七） 验证Bean定义是否懒加载、是否是单俐、是否抽象，验证通过后会在IOC加载时生产。<br>（八） 在生产的时候会先去容器看一下是否有生产好的bean，有则返回，没有则生产。<br>（九）通过反射拿到一个没有赋值属性的对象。<br>（十） 判断是否注入。<br>（十一）判断Bean类型，回调Awaro接口。<br>（十二）调用生命周期回调方法。<br> (十三）如果需要代理则完成代理（AOP)。<br>（十四）put到单俐池，生产Bean完成，存在Spring容器中。</p>
+</blockquote>
+<h4 id="19、Spring-IOC扩展点有什么作用？"><a href="#19、Spring-IOC扩展点有什么作用？" class="headerlink" title="19、Spring IOC扩展点有什么作用？"></a>19、Spring IOC扩展点有什么作用？</h4><blockquote>
+<p>IOC加载的时候提供的扩展接口或者说扩展方法。</p>
+</blockquote>
+<h4 id="20、什么是SpringBean、javaBean、对象"><a href="#20、什么是SpringBean、javaBean、对象" class="headerlink" title="20、什么是SpringBean、javaBean、对象"></a>20、什么是SpringBean、javaBean、对象</h4><blockquote>
+<p>SpringBean是交给Spring管理的对象。javabean是符合规范的Java对象，比如类是公开的、属性是私有的、提供get和set方法等。  </p>
+</blockquote>
+<h4 id="21、配置Bean的几种方法？"><a href="#21、配置Bean的几种方法？" class="headerlink" title="21、配置Bean的几种方法？"></a>21、配置Bean的几种方法？</h4><blockquote>
+<p> (一) xml方式。<br> (二) 注解方式需要配置扫面包。<br> (三) javaConfig@Bean方式自己实例化对象。<br> (四) @Input。</p>
+</blockquote>
+<h4 id="22、Spring有几种作用域"><a href="#22、Spring有几种作用域" class="headerlink" title="22、Spring有几种作用域"></a>22、Spring有几种作用域</h4><blockquote>
+<p> (一) 单俐。<br> (二) 多例。<br> (三) Web应用的话有session、request、application作用域</p>
+</blockquote>
+<h4 id="23、单俐Bean的优势或者说单俐设计模式"><a href="#23、单俐Bean的优势或者说单俐设计模式" class="headerlink" title="23、单俐Bean的优势或者说单俐设计模式"></a>23、单俐Bean的优势或者说单俐设计模式</h4><blockquote>
+<p> (一) 减少性能消耗、节省内存、提高内存利用率。<br> (二) 减少JVM的回收。<br> (三) 获取对象速度快，除第一次生成外都是从缓存获取。</p>
+</blockquote>
+<h4 id="24、Spring是线程安全的吗？如何处理线程安全问题，"><a href="#24、Spring是线程安全的吗？如何处理线程安全问题，" class="headerlink" title="24、Spring是线程安全的吗？如何处理线程安全问题，"></a>24、Spring是线程安全的吗？如何处理线程安全问题，</h4><blockquote>
+<p>单俐的Bean，如果类中声明了成员变量，并且有读写操作，就会线程不安全。<br>(一) 成员变量声明在方法中。<br>(二) 设置单俐Bean为多例Bean。<br>(三) 同步锁，并行变船行影响吞吐量。<br>(四) 成员变量声明在方法内。  </p>
+</blockquote>
+<h4 id="25、实例化Bean有几种方式？"><a href="#25、实例化Bean有几种方式？" class="headerlink" title="25、实例化Bean有几种方式？"></a>25、实例化Bean有几种方式？</h4><blockquote>
+<p>(一) 构造器通过反射方式。<br>(二) 静态工厂方式，指定静态方法实例对象。<br>(三) 实例工厂方式（@Bean）。<br>(四) FactoryBean，实现FactoryBean的接口。</p>
+</blockquote>
+<h4 id="26、Bean的装配是什么？"><a href="#26、Bean的装配是什么？" class="headerlink" title="26、Bean的装配是什么？"></a>26、Bean的装配是什么？</h4><blockquote>
+<p>就是SpirngBean之间互相依赖起来。 </p>
+</blockquote>
+<h4 id="27、自动注入有什么限制吗？"><a href="#27、自动注入有什么限制吗？" class="headerlink" title="27、自动注入有什么限制吗？"></a>27、自动注入有什么限制吗？</h4><blockquote>
+<p>(一) 要声明set方法<br>(二) 可以用constructor、property覆盖自动注入。<br>(三) 不能自动注入简单属性比如：基本数据类型、字符串等。<br>(四) 自动注入不如显式装配精确。</p>
+</blockquote>
+<h4 id="28、-与-equals-的区别？"><a href="#28、-与-equals-的区别？" class="headerlink" title="28、== 与 equals 的区别？"></a>28、== 与 equals 的区别？</h4><blockquote>
+<p>(一) == 符号是比较两个对象的内存地址，equals方法是对比值是否一致。<br>(二) 从逻辑上编写代码都应该使用equals方法，比如Integer前127位使用的是同一个内存空间，使用==比较返回true，超过128位==比较返回false。</p>
+</blockquote>
+<h4 id="29、两个对象hashcode值相同，是否equals也一定为true？"><a href="#29、两个对象hashcode值相同，是否equals也一定为true？" class="headerlink" title="29、两个对象hashcode值相同，是否equals也一定为true？"></a>29、两个对象hashcode值相同，是否equals也一定为true？</h4></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://blog.dongshuai.top">董帅</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://blog.dongshuai.top/2021/12/01/exercises/">http://blog.dongshuai.top/2021/12/01/exercises/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://blog.dongshuai.top" target="_blank">董帅的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/java/">java</a></div><div class="post_share"><div class="social-share" data-image="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F540e03f9ba1527258a27e6a0f31aacc59c6a5ec6.jpg&amp;refer=http%3A%2F%2Fi2.hdslb.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1654421952&amp;t=e363fdea62ccee37819c1f9151cd51ea" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/02/09/javaCV%E5%BC%80%E5%A7%8B/" title="第一节 javaCV开始"><img class="cover" src="https://s4.ax1x.com/2022/02/09/H8BFk8.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">第一节 javaCV开始</div></div></a></div><div class="next-post pull-right"><a href="/2021/11/15/javaJVM%E8%B0%83%E4%BC%98/" title="java虚拟机介绍"><img class="cover" src="https://s3.bmp.ovh/imgs/2021/12/816a5a30f6cee438.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">java虚拟机介绍</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/04/18/MinIO/" title="分布式文件系统MinIO"><img class="cover" src="https://s1.ax1x.com/2022/04/24/L4O3ZV.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-18</div><div class="title">分布式文件系统MinIO</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://img.zcool.cn/community/01ffdf5b706950a801206a359c7cd6.jpg@1280w_1l_2o_100sh.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">董帅</div><div class="author-info__description">记录碎片化的信息</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Dong2048"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://www.shijuevr.top/atom.xml" target="_blank" title="订阅"><i class="fas fa-rss"></i></a><a class="social-icon" href="mailto:shuaid@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://weibo.com/u/3197883960" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://preview.cloud.189.cn/image/imageAction?param=31C28F5A4F8CA57461E99FE12B6CB58B8BAEBEB37378CFABF194F3E13AC187176F8F7F107CFAEF849D9591BC9F13D7D559DA2E32BD8421926EDA6A6B95404F80A33FE2B230A7B6B21C9DCD37BF410A5D10A96463D3EC450A6936293502877B76A320A88C6DE7D6558DE998CF7327529DE7B7B523" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">求职中！！需要一份好的工作！！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81HashMap%E7%9A%84put%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">1、HashMap的put方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E8%AF%B4%E4%B8%80%E4%B8%8BThreadLocal"><span class="toc-number">2.</span> <span class="toc-text">2、说一下ThreadLocal</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E8%AF%B4%E4%B8%80%E4%B8%8BJVM%E4%B8%AD%E5%93%AA%E4%BA%9B%E6%98%AF%E5%85%B1%E4%BA%AB%E5%8C%BA%E5%9F%9F"><span class="toc-number">3.</span> <span class="toc-text">3、说一下JVM中哪些是共享区域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E8%AF%B4%E4%B8%80%E4%B8%8Bgc-root"><span class="toc-number">4.</span> <span class="toc-text">4、说一下gc root</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81%E8%AF%B4%E4%B8%80%E4%B8%8BMinor-GC%E3%80%81full-gc-%E5%92%8C-Major-gc%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">5.</span> <span class="toc-text">5、说一下Minor GC、full gc 和 Major gc的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5jvm%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">6、正在运行的项目如何排查jvm问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7%E3%80%81%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E7%BA%BF%E7%A8%8B%E6%AD%BB%E9%94%81"><span class="toc-number">7.</span> <span class="toc-text">7、如何查看线程死锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8%E3%80%81%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E9%80%9A%E8%AE%AF%E7%9A%84"><span class="toc-number">8.</span> <span class="toc-text">8、线程之间是如何进行通讯的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9%E3%80%81%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8BSpring"><span class="toc-number">9.</span> <span class="toc-text">9、介绍一下Spring</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10%E3%80%81Spring%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9"><span class="toc-number">10.</span> <span class="toc-text">10、Spring的优点和缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFIOC%E5%AE%B9%E5%99%A8%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-number">11.</span> <span class="toc-text">11、什么是IOC容器，有什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12%E3%80%81Spring-IOC%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%9C%BA%E5%88%B6%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">12.</span> <span class="toc-text">12、Spring IOC的实现机制是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13%E3%80%81Spring%E7%9A%84IOC%E5%92%8CDI%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">13.</span> <span class="toc-text">13、Spring的IOC和DI有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14%E3%80%81%E7%B4%A7%E8%80%A6%E5%90%88%E4%B8%8E%E6%9D%BE%E8%80%A6%E5%90%88%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E6%9D%BE%E8%80%A6%E5%90%88%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%9F"><span class="toc-number">14.</span> <span class="toc-text">14、紧耦合与松耦合的区别，如何编写松耦合的代码？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15%E3%80%81-BeanFactory%E4%BD%9C%E7%94%A8"><span class="toc-number">15.</span> <span class="toc-text">15、 BeanFactory作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16%E3%80%81BeanDefinition%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">16.</span> <span class="toc-text">16、BeanDefinition的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#17%E3%80%81BeanFactory%E5%92%8CApplicationcontext%E7%9A%84%E5%8C%BA%E5%88%AB%E3%80%82"><span class="toc-number">17.</span> <span class="toc-text">17、BeanFactory和Applicationcontext的区别。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#18%E3%80%81Spring-ioc%E5%AE%B9%E5%99%A8%E7%9A%84%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E3%80%82"><span class="toc-number">18.</span> <span class="toc-text">18、Spring ioc容器的加载过程。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#19%E3%80%81Spring-IOC%E6%89%A9%E5%B1%95%E7%82%B9%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-number">19.</span> <span class="toc-text">19、Spring IOC扩展点有什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#20%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFSpringBean%E3%80%81javaBean%E3%80%81%E5%AF%B9%E8%B1%A1"><span class="toc-number">20.</span> <span class="toc-text">20、什么是SpringBean、javaBean、对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#21%E3%80%81%E9%85%8D%E7%BD%AEBean%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-number">21.</span> <span class="toc-text">21、配置Bean的几种方法？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22%E3%80%81Spring%E6%9C%89%E5%87%A0%E7%A7%8D%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">22.</span> <span class="toc-text">22、Spring有几种作用域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23%E3%80%81%E5%8D%95%E4%BF%90Bean%E7%9A%84%E4%BC%98%E5%8A%BF%E6%88%96%E8%80%85%E8%AF%B4%E5%8D%95%E4%BF%90%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">23.</span> <span class="toc-text">23、单俐Bean的优势或者说单俐设计模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24%E3%80%81Spring%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97%EF%BC%9F%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%EF%BC%8C"><span class="toc-number">24.</span> <span class="toc-text">24、Spring是线程安全的吗？如何处理线程安全问题，</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#25%E3%80%81%E5%AE%9E%E4%BE%8B%E5%8C%96Bean%E6%9C%89%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-number">25.</span> <span class="toc-text">25、实例化Bean有几种方式？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#26%E3%80%81Bean%E7%9A%84%E8%A3%85%E9%85%8D%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">26.</span> <span class="toc-text">26、Bean的装配是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#27%E3%80%81%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%85%A5%E6%9C%89%E4%BB%80%E4%B9%88%E9%99%90%E5%88%B6%E5%90%97%EF%BC%9F"><span class="toc-number">27.</span> <span class="toc-text">27、自动注入有什么限制吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#28%E3%80%81-%E4%B8%8E-equals-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">28.</span> <span class="toc-text">28、&#x3D;&#x3D; 与 equals 的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29%E3%80%81%E4%B8%A4%E4%B8%AA%E5%AF%B9%E8%B1%A1hashcode%E5%80%BC%E7%9B%B8%E5%90%8C%EF%BC%8C%E6%98%AF%E5%90%A6equals%E4%B9%9F%E4%B8%80%E5%AE%9A%E4%B8%BAtrue%EF%BC%9F"><span class="toc-number">29.</span> <span class="toc-text">29、两个对象hashcode值相同，是否equals也一定为true？</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/18/MinIO/" title="分布式文件系统MinIO"><img src="https://s1.ax1x.com/2022/04/24/L4O3ZV.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="分布式文件系统MinIO"/></a><div class="content"><a class="title" href="/2022/04/18/MinIO/" title="分布式文件系统MinIO">分布式文件系统MinIO</a><time datetime="2022-04-18T06:24:38.000Z" title="发表于 2022-04-18 14:24:38">2022-04-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/04/02/shardingsphere-Proxy/" title="shardingsphere-Proxy">shardingsphere-Proxy</a><time datetime="2022-04-02T06:57:07.000Z" title="发表于 2022-04-02 14:57:07">2022-04-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/09/%E7%AC%AC%E4%B8%83%E8%8A%82-FrameConverter%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%8F%8ACanvasFrame%E5%9B%BE%E5%83%8F%E9%A2%84%E8%A7%88%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="第七节 FrameConverter转换工具类及CanvasFrame图像预览工具类"><img src="https://s4.ax1x.com/2022/02/10/HYQ3vT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第七节 FrameConverter转换工具类及CanvasFrame图像预览工具类"/></a><div class="content"><a class="title" href="/2022/02/09/%E7%AC%AC%E4%B8%83%E8%8A%82-FrameConverter%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%8F%8ACanvasFrame%E5%9B%BE%E5%83%8F%E9%A2%84%E8%A7%88%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="第七节 FrameConverter转换工具类及CanvasFrame图像预览工具类">第七节 FrameConverter转换工具类及CanvasFrame图像预览工具类</a><time datetime="2022-02-09T07:45:57.000Z" title="发表于 2022-02-09 15:45:57">2022-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/09/%E7%AC%AC%E5%85%AD%E8%8A%82-%E5%B8%A7%E8%BF%87%E6%BB%A4%E5%99%A8-FrameFilter-%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/" title="第六节 帧过滤器(FrameFilter)的原理与应用"><img src="https://s4.ax1x.com/2022/02/10/HYMSf0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第六节 帧过滤器(FrameFilter)的原理与应用"/></a><div class="content"><a class="title" href="/2022/02/09/%E7%AC%AC%E5%85%AD%E8%8A%82-%E5%B8%A7%E8%BF%87%E6%BB%A4%E5%99%A8-FrameFilter-%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/" title="第六节 帧过滤器(FrameFilter)的原理与应用">第六节 帧过滤器(FrameFilter)的原理与应用</a><time datetime="2022-02-09T07:31:34.000Z" title="发表于 2022-02-09 15:31:34">2022-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/09/%E7%AC%AC%E4%BA%94%E8%8A%82-%E5%B8%A7%E5%BD%95%E5%88%B6%E5%99%A8-%E6%8E%A8%E6%B5%81%E5%99%A8-FrameRecorder-%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/" title="第五节 帧录制器/推流器(FrameRecorder)的原理与应用"><img src="https://s4.ax1x.com/2022/02/10/HYKzYq.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第五节 帧录制器/推流器(FrameRecorder)的原理与应用"/></a><div class="content"><a class="title" href="/2022/02/09/%E7%AC%AC%E4%BA%94%E8%8A%82-%E5%B8%A7%E5%BD%95%E5%88%B6%E5%99%A8-%E6%8E%A8%E6%B5%81%E5%99%A8-FrameRecorder-%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/" title="第五节 帧录制器/推流器(FrameRecorder)的原理与应用">第五节 帧录制器/推流器(FrameRecorder)的原理与应用</a><time datetime="2022-02-09T07:21:07.000Z" title="发表于 2022-02-09 15:21:07">2022-02-09</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F540e03f9ba1527258a27e6a0f31aacc59c6a5ec6.jpg&amp;refer=http%3A%2F%2Fi2.hdslb.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=auto?sec=1654421952&amp;t=e363fdea62ccee37819c1f9151cd51ea')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 董帅</div><div class="footer_custom_text">本站部分文章、资源来自互联网，版权归原作者及网站所有，如果侵犯了您的权利请及时通知本站，予以删除。<br/> 版权声明：凡注明本站原创文章、作品，未经站长许可，任何人或机构不得以任何形式对本站内容进行复制作商业用途。对于不遵守此声明或者其他违法使用本文内容者，依法保留追究权等。<br/> 博主邮箱：shuaid@foxmail.com <br/></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-dong2048.vercel.app/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-dong2048.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
